@@ -56,15 +56,39 @@
 		339F8F89289689C50025BF91 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				339F8F8A289689C50025BF91 /* AppDelegate.swift */,
-				339F8F8C289689C50025BF91 /* SceneDelegate.swift */,
-				339F8F8E289689C50025BF91 /* ViewController.swift */,
-				339F8F90289689C50025BF91 /* Main.storyboard */,
+				33F5B59C2896A725005B4E04 /* Delegates */,
+				33F5B59D2896A730005B4E04 /* Controllers */,
+				33F5B59E2896A73F005B4E04 /* Views */,
 				339F8F93289689C70025BF91 /* Assets.xcassets */,
-				339F8F95289689C70025BF91 /* LaunchScreen.storyboard */,
 				339F8F98289689C70025BF91 /* Info.plist */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		33F5B59C2896A725005B4E04 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				339F8F8A289689C50025BF91 /* AppDelegate.swift */,
+				339F8F8C289689C50025BF91 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		33F5B59D2896A730005B4E04 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				339F8F8E289689C50025BF91 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		33F5B59E2896A73F005B4E04 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				339F8F90289689C50025BF91 /* Main.storyboard */,
+				339F8F95289689C70025BF91 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
