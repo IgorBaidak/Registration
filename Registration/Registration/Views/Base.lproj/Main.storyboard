@@ -64,7 +64,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="npe-eF-aLd" secondAttribute="trailing" constant="25" id="2Yf-Z4-R9Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ELe-uC-Cbu" secondAttribute="trailing" constant="200" id="7Qt-mR-Fe5"/>
@@ -231,6 +231,9 @@
                                                 <rect key="frame" x="169.5" y="699" width="75" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                                <connections>
+                                                    <segue destination="K6D-5g-bgj" kind="presentation" identifier="goToVerification" id="3j9-j3-YTZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -277,6 +280,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nu5-1V-3vh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1398.5507246376812" y="83.705357142857139"/>
+        </scene>
+        <!--Verification-->
+        <scene sceneID="nns-Rc-r8R">
+            <objects>
+                <viewController storyboardIdentifier="VerificationViewController" id="K6D-5g-bgj" userLabel="Verification" customClass="VerificationViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fR8-aZ-pEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter secret code from e-mail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDD-2p-VmF">
+                                <rect key="frame" x="25" y="69" width="364" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jj6-QS-Qt2">
+                                <rect key="frame" x="25" y="431" width="364" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FCm-aT-88r"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="jj6-QS-Qt2" firstAttribute="top" secondItem="UDD-2p-VmF" secondAttribute="bottom" constant="290" id="05L-3u-cts"/>
+                            <constraint firstItem="UDD-2p-VmF" firstAttribute="leading" secondItem="FCm-aT-88r" secondAttribute="leading" constant="25" id="G0T-cv-5mp"/>
+                            <constraint firstItem="UDD-2p-VmF" firstAttribute="top" secondItem="FCm-aT-88r" secondAttribute="top" constant="25" id="OGV-YQ-EYF"/>
+                            <constraint firstItem="jj6-QS-Qt2" firstAttribute="leading" secondItem="FCm-aT-88r" secondAttribute="leading" constant="25" id="Zfv-W1-Ueb"/>
+                            <constraint firstAttribute="trailing" secondItem="UDD-2p-VmF" secondAttribute="trailing" constant="25" id="hHc-Hx-fCW"/>
+                            <constraint firstItem="FCm-aT-88r" firstAttribute="trailing" secondItem="jj6-QS-Qt2" secondAttribute="trailing" constant="25" id="rPJ-Pn-tY9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AEY-Of-aXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2094" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uyv-Z9-Rdl">

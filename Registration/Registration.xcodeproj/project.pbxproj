@@ -14,6 +14,7 @@
 		339F8F97289689C70025BF91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339F8F95289689C70025BF91 /* LaunchScreen.storyboard */; };
 		33F5B5A02896C4D5005B4E04 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5B59F2896C4D5005B4E04 /* SignInViewController.swift */; };
 		33F5B5A22896C4F1005B4E04 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5B5A12896C4F1005B4E04 /* CreateAccountViewController.swift */; };
+		33F5B5A428971AD2005B4E04 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5B5A328971AD2005B4E04 /* VerificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		339F8F98289689C70025BF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33F5B59F2896C4D5005B4E04 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		33F5B5A12896C4F1005B4E04 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		33F5B5A328971AD2005B4E04 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				33F5B59F2896C4D5005B4E04 /* SignInViewController.swift */,
+				33F5B5A328971AD2005B4E04 /* VerificationViewController.swift */,
 				33F5B5A12896C4F1005B4E04 /* CreateAccountViewController.swift */,
 			);
 			path = Controllers;
@@ -167,6 +170,7 @@
 			files = (
 				33F5B5A22896C4F1005B4E04 /* CreateAccountViewController.swift in Sources */,
 				339F8F8B289689C50025BF91 /* AppDelegate.swift in Sources */,
+				33F5B5A428971AD2005B4E04 /* VerificationViewController.swift in Sources */,
 				339F8F8D289689C50025BF91 /* SceneDelegate.swift in Sources */,
 				33F5B5A02896C4D5005B4E04 /* SignInViewController.swift in Sources */,
 			);
