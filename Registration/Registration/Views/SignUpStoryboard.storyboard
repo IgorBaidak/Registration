@@ -39,7 +39,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8XR-o5-S9g">
-                                                <rect key="frame" x="25" y="216" width="364" height="61"/>
+                                                <rect key="frame" x="25" y="216" width="364" height="511"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wuo-1T-ZNL">
                                                         <rect key="frame" x="0.0" y="8" width="364" height="323.5"/>
@@ -53,7 +53,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J33-sS-mEI">
                                                                 <rect key="frame" x="0.0" y="35.5" width="364" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                                 <connections>
                                                                     <action selector="emailAction:" destination="gJw-bl-xEl" eventType="editingChanged" id="zMv-kx-DLB"/>
                                                                 </connections>
@@ -80,9 +80,6 @@
                                                                 <rect key="frame" x="0.0" y="178" width="364" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="nameAction:" destination="gJw-bl-xEl" eventType="editingChanged" id="0NG-ba-i7B"/>
-                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Enter strong password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HO-iN-Brt">
                                                                 <rect key="frame" x="0.0" y="227" width="364" height="20.5"/>
@@ -93,7 +90,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2aW-fc-Gtu">
                                                                 <rect key="frame" x="0.0" y="262.5" width="364" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                 <connections>
                                                                     <action selector="passwordAction:" destination="gJw-bl-xEl" eventType="editingChanged" id="O4w-2h-Z4a"/>
                                                                 </connections>
@@ -144,7 +141,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lzm-99-3FW">
                                                         <rect key="frame" x="0.0" y="450.5" width="364" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                         <connections>
                                                             <action selector="confirmPasswordAction:" destination="gJw-bl-xEl" eventType="editingChanged" id="BrB-2q-G8R"/>
                                                         </connections>
@@ -160,7 +157,7 @@
                                                     <constraint firstItem="wuo-1T-ZNL" firstAttribute="top" secondItem="8XR-o5-S9g" secondAttribute="top" constant="8" id="M93-r3-7nX"/>
                                                     <constraint firstItem="vYC-Ib-FGh" firstAttribute="leading" secondItem="8XR-o5-S9g" secondAttribute="leading" id="Pzr-eD-HGe"/>
                                                     <constraint firstAttribute="trailing" secondItem="vYC-Ib-FGh" secondAttribute="trailing" id="ROH-AM-Kxh"/>
-                                                    <constraint firstAttribute="height" secondItem="fnI-At-PQm" secondAttribute="height" id="Scv-gi-OnV"/>
+                                                    <constraint firstAttribute="height" secondItem="fnI-At-PQm" secondAttribute="height" constant="450" id="Scv-gi-OnV"/>
                                                     <constraint firstItem="Lzm-99-3FW" firstAttribute="top" secondItem="fnI-At-PQm" secondAttribute="bottom" constant="20" id="Y0F-kF-0Xc"/>
                                                     <constraint firstItem="fnI-At-PQm" firstAttribute="top" secondItem="vYC-Ib-FGh" secondAttribute="bottom" constant="20" id="j9d-Ko-25L"/>
                                                     <constraint firstItem="Lzm-99-3FW" firstAttribute="leading" secondItem="fnI-At-PQm" secondAttribute="leading" id="rbs-ve-aKY"/>
@@ -178,8 +175,11 @@
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5k-E9-6Rh">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5k-E9-6Rh">
                                                 <rect key="frame" x="100" y="735" width="214" height="31"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <bool key="isElement" value="NO"/>
+                                                </accessibility>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
                                                 <connections>
@@ -239,7 +239,7 @@
                         <outlet property="errorConformPasswordLbl" destination="CF6-Zh-3B3" id="pXn-lA-37p"/>
                         <outlet property="errorEmailLbl" destination="BYM-Bk-9sE" id="T4E-TU-Anw"/>
                         <outlet property="errorPaswordLbl" destination="1vg-p1-wTP" id="cQU-ZL-ZPT"/>
-                        <outlet property="nameTF" destination="nFs-1x-5dx" id="WSv-eI-wWd"/>
+                        <outlet property="nameTF" destination="nFs-1x-5dx" id="N8r-lP-Esm"/>
                         <outlet property="passwordTF" destination="2aW-fc-Gtu" id="9CE-5f-JkW"/>
                         <outlet property="signUpButton" destination="Y5k-E9-6Rh" id="DDy-iA-OCk"/>
                         <outletCollection property="strongPasswordIndicator" destination="rpK-ie-GRG" collectionClass="NSMutableArray" id="paW-70-3Tb"/>

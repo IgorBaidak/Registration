@@ -15,7 +15,7 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet private weak var emailTF: UITextField!
     @IBOutlet private weak var errorEmailLbl: UILabel!
     ///name
-    @IBOutlet private weak var nameTF: UITextField!
+    @IBOutlet weak var nameTF: UITextField!
     ///password
     @IBOutlet private weak var passwordTF: UITextField!
     @IBOutlet private weak var errorPaswordLbl: UILabel!
@@ -52,21 +52,26 @@ class CreateAccountViewController: UIViewController {
         errorEmailLbl.isHidden = validEmail
     }
     
-    @IBAction func nameAction(_ sender: UITextField) {
-        
-    }
     
     @IBAction func passwordAction(_ sender: UITextField) {
         if let password = sender.text,
            !password.isEmpty {
            strongPassword = VerificationService.isValidPassword(pass: password)
         }
-        errorPaswordLbl.isHidden = strongPassword == .veryWeak
+        errorPaswordLbl.isHidden = strongPassword != .veryWeak
+        strongPassIndicator()
         }
         
     
     @IBAction func confirmPasswordAction(_ sender: UITextField) {
-        
+        if let confirm = sender.text,
+           !confirm.isEmpty,
+           let confirmPass = passwordTF.text,
+           !confirmPass.isEmpty {
+            validConfirmPassword = VerificationService.isPassConfirm(pass1: confirmPass, pass2: confirm)
+        }
+            errorConformPasswordLbl.isHidden = validConfirmPassword
+        signUpButton.isEnabled = validConfirmPassword
     }
     
     @IBAction func signInButton() {
@@ -77,6 +82,17 @@ class CreateAccountViewController: UIViewController {
         
     }
     
+    // MARK: - SetupPasswordIndicator
+    
+    private func strongPassIndicator() {
+        strongPasswordIndicator.enumerated().forEach {index, view in
+            if index <= (strongPassword.rawValue - 1) {
+                view.alpha = 1
+            } else {
+                view.alpha = 0.1
+            }
+        }
+    }
     
 }
 
