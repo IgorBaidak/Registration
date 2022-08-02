@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3353D04828983A1200C197DC /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353D04728983A1200C197DC /* SignUpStoryboard.storyboard */; };
+		3353D04A2899794800C197DC /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353D0492899794800C197DC /* Verification.swift */; };
+		3353D04E28998BCA00C197DC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353D04D28998BCA00C197DC /* UIViewControllerExtension.swift */; };
 		339F8F8B289689C50025BF91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339F8F8A289689C50025BF91 /* AppDelegate.swift */; };
 		339F8F8D289689C50025BF91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339F8F8C289689C50025BF91 /* SceneDelegate.swift */; };
 		339F8F92289689C50025BF91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339F8F90289689C50025BF91 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3353D04728983A1200C197DC /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		3353D0492899794800C197DC /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
+		3353D04D28998BCA00C197DC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		339F8F87289689C50025BF91 /* Registration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Registration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		339F8F8A289689C50025BF91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		339F8F8C289689C50025BF91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3353D04B2899870900C197DC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3353D0492899794800C197DC /* Verification.swift */,
+				3353D04C28998B7900C197DC /* Extension */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3353D04C28998B7900C197DC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3353D04D28998BCA00C197DC /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		339F8F7E289689C50025BF91 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +83,7 @@
 		339F8F89289689C50025BF91 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				3353D04B2899870900C197DC /* Service */,
 				33F5B59C2896A725005B4E04 /* Delegates */,
 				33F5B59D2896A730005B4E04 /* Controllers */,
 				33F5B59E2896A73F005B4E04 /* Views */,
@@ -92,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				339F8F90289689C50025BF91 /* Main.storyboard */,
+				3353D04728983A1200C197DC /* SignUpStoryboard.storyboard */,
 				339F8F95289689C70025BF91 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -156,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				339F8F97289689C70025BF91 /* LaunchScreen.storyboard in Resources */,
+				3353D04828983A1200C197DC /* SignUpStoryboard.storyboard in Resources */,
 				339F8F94289689C70025BF91 /* Assets.xcassets in Resources */,
 				339F8F92289689C50025BF91 /* Main.storyboard in Resources */,
 			);
@@ -168,10 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3353D04A2899794800C197DC /* Verification.swift in Sources */,
 				33F5B5A22896C4F1005B4E04 /* CreateAccountViewController.swift in Sources */,
 				339F8F8B289689C50025BF91 /* AppDelegate.swift in Sources */,
 				33F5B5A428971AD2005B4E04 /* VerificationViewController.swift in Sources */,
 				339F8F8D289689C50025BF91 /* SceneDelegate.swift in Sources */,
+				3353D04E28998BCA00C197DC /* UIViewControllerExtension.swift in Sources */,
 				33F5B5A02896C4D5005B4E04 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
