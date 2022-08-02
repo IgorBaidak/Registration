@@ -25,19 +25,22 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet private var strongPasswordIndicator: [UIView]!
     ///signUp Button
     @IBOutlet private weak var signUpButton: UIButton!
+    ///FX-Label
+    @IBOutlet weak var fxLabel: UIVisualEffectView!
     
     // MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fxLabel.isHidden = true
         hideKeyboardWhenTappedAround()
     }
     
     // MARK: - Properties
     
-    private var validEmail = false
-    private var validConfirmPassword = false
-    private var strongPassword: PasswordStrength = .veryWeak
+    private var validEmail = false {didSet{updateButtonAndFx()}}
+    private var validConfirmPassword = false {didSet{updateButtonAndFx()}}
+    private var strongPassword: PasswordStrength = .veryWeak {didSet{updateButtonAndFx()}}
     
     // MARK: - @IBAction
     
@@ -70,15 +73,16 @@ class CreateAccountViewController: UIViewController {
            !confirmPass.isEmpty {
             validConfirmPassword = VerificationService.isPassConfirm(pass1: confirmPass, pass2: confirm)
         }
-            errorConformPasswordLbl.isHidden = validConfirmPassword
-        signUpButton.isEnabled = validConfirmPassword
+        errorConformPasswordLbl.isHidden = validConfirmPassword
     }
+    
     
     @IBAction func signInButton() {
         navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func signUpButton(_ sender: UIButton) {
+       
         
     }
     
@@ -93,8 +97,11 @@ class CreateAccountViewController: UIViewController {
             }
         }
     }
-    
-}
+    private func updateButtonAndFx() {
+        signUpButton.isEnabled = validEmail && validConfirmPassword && strongPassword != .veryWeak
+        fxLabel.isHidden = !signUpButton.isEnabled
+    }
+
 
     /*
     // MARK: - Navigation
@@ -105,5 +112,5 @@ class CreateAccountViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+}
 
