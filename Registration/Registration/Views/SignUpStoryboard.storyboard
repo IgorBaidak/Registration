@@ -182,6 +182,23 @@
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mpk-xN-yvD">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="649"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaJ-SB-Lb4">
+                                                            <rect key="frame" x="25" y="44" width="364" height="95.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <string key="text">!!! CONGATULATIONS !!!
+
+To complete the registration, please press "Sign Up".</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="iaJ-SB-Lb4" secondAttribute="trailing" constant="25" id="FuC-W1-G9M"/>
+                                                        <constraint firstItem="iaJ-SB-Lb4" firstAttribute="top" secondItem="mpk-xN-yvD" secondAttribute="top" constant="44" id="hum-rR-OlJ"/>
+                                                        <constraint firstItem="iaJ-SB-Lb4" firstAttribute="leading" secondItem="mpk-xN-yvD" secondAttribute="leading" constant="25" id="ttn-O2-UmC"/>
+                                                    </constraints>
                                                 </view>
                                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                                 <blurEffect style="regular"/>
@@ -250,6 +267,7 @@
                     <navigationItem key="navigationItem" id="dk3-z8-Why"/>
                     <connections>
                         <outlet property="confirmPasswordTF" destination="Lzm-99-3FW" id="TgR-Gq-JRg"/>
+                        <outlet property="congratMessage" destination="iaJ-SB-Lb4" id="RWx-yg-wEm"/>
                         <outlet property="emailTF" destination="J33-sS-mEI" id="J2A-ld-FfR"/>
                         <outlet property="errorConformPasswordLbl" destination="CF6-Zh-3B3" id="pXn-lA-37p"/>
                         <outlet property="errorEmailLbl" destination="BYM-Bk-9sE" id="T4E-TU-Anw"/>

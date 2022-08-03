@@ -27,12 +27,14 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet private weak var signUpButton: UIButton!
     ///FX-Label
     @IBOutlet weak var fxLabel: UIVisualEffectView!
-    
+    /// Complete message
+    @IBOutlet weak var congratMessage: UILabel!
     // MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fxLabel.isHidden = true
+        congratMessage.isEnabled = false
         hideKeyboardWhenTappedAround()
     }
     
@@ -100,6 +102,7 @@ class CreateAccountViewController: UIViewController {
     private func updateButtonAndFx() {
         signUpButton.isEnabled = validEmail && validConfirmPassword && strongPassword != .veryWeak
         fxLabel.isHidden = !signUpButton.isEnabled
+        congratMessage.isEnabled = signUpButton.isEnabled
     }
 
 
