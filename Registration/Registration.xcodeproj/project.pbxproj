@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3332B5F528A00734008CD840 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332B5F428A00734008CD840 /* UserModel.swift */; };
+		3332B5F728A02D2A008CD840 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332B5F628A02D2A008CD840 /* HelloViewController.swift */; };
+		3332B5F928A0322B008CD840 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332B5F828A0322B008CD840 /* UserDefaultsService.swift */; };
+		3332B5FB28A03294008CD840 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332B5FA28A03294008CD840 /* UserDefaults.swift */; };
+		3332B5FD28A04CB2008CD840 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332B5FC28A04CB2008CD840 /* ProfileViewController.swift */; };
+		3347B22D289C67CE009D9FE7 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3347B22C289C67CE009D9FE7 /* ProfileStoryboard.storyboard */; };
 		3353D04828983A1200C197DC /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353D04728983A1200C197DC /* SignUpStoryboard.storyboard */; };
 		3353D04A2899794800C197DC /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353D0492899794800C197DC /* Verification.swift */; };
 		3353D04E28998BCA00C197DC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353D04D28998BCA00C197DC /* UIViewControllerExtension.swift */; };
@@ -21,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3332B5F428A00734008CD840 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		3332B5F628A02D2A008CD840 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		3332B5F828A0322B008CD840 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		3332B5FA28A03294008CD840 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		3332B5FC28A04CB2008CD840 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3347B22C289C67CE009D9FE7 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		3353D04728983A1200C197DC /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		3353D0492899794800C197DC /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 		3353D04D28998BCA00C197DC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -47,10 +59,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3332B5F328A006DE008CD840 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3332B5F428A00734008CD840 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3353D04B2899870900C197DC /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				3353D0492899794800C197DC /* Verification.swift */,
+				3332B5F828A0322B008CD840 /* UserDefaultsService.swift */,
 				3353D04C28998B7900C197DC /* Extension */,
 			);
 			path = Service;
@@ -60,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				3353D04D28998BCA00C197DC /* UIViewControllerExtension.swift */,
+				3332B5FA28A03294008CD840 /* UserDefaults.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -83,6 +105,7 @@
 		339F8F89289689C50025BF91 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				3332B5F328A006DE008CD840 /* Models */,
 				3353D04B2899870900C197DC /* Service */,
 				33F5B59C2896A725005B4E04 /* Delegates */,
 				33F5B59D2896A730005B4E04 /* Controllers */,
@@ -108,6 +131,8 @@
 				33F5B59F2896C4D5005B4E04 /* SignInViewController.swift */,
 				33F5B5A328971AD2005B4E04 /* VerificationViewController.swift */,
 				33F5B5A12896C4F1005B4E04 /* CreateAccountViewController.swift */,
+				3332B5F628A02D2A008CD840 /* HelloViewController.swift */,
+				3332B5FC28A04CB2008CD840 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -115,9 +140,10 @@
 		33F5B59E2896A73F005B4E04 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				339F8F95289689C70025BF91 /* LaunchScreen.storyboard */,
 				339F8F90289689C50025BF91 /* Main.storyboard */,
 				3353D04728983A1200C197DC /* SignUpStoryboard.storyboard */,
-				339F8F95289689C70025BF91 /* LaunchScreen.storyboard */,
+				3347B22C289C67CE009D9FE7 /* ProfileStoryboard.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +210,7 @@
 				3353D04828983A1200C197DC /* SignUpStoryboard.storyboard in Resources */,
 				339F8F94289689C70025BF91 /* Assets.xcassets in Resources */,
 				339F8F92289689C50025BF91 /* Main.storyboard in Resources */,
+				3347B22D289C67CE009D9FE7 /* ProfileStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,10 +221,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3332B5F728A02D2A008CD840 /* HelloViewController.swift in Sources */,
 				3353D04A2899794800C197DC /* Verification.swift in Sources */,
 				33F5B5A22896C4F1005B4E04 /* CreateAccountViewController.swift in Sources */,
+				3332B5FB28A03294008CD840 /* UserDefaults.swift in Sources */,
+				3332B5F528A00734008CD840 /* UserModel.swift in Sources */,
 				339F8F8B289689C50025BF91 /* AppDelegate.swift in Sources */,
+				3332B5FD28A04CB2008CD840 /* ProfileViewController.swift in Sources */,
 				33F5B5A428971AD2005B4E04 /* VerificationViewController.swift in Sources */,
+				3332B5F928A0322B008CD840 /* UserDefaultsService.swift in Sources */,
 				339F8F8D289689C50025BF91 /* SceneDelegate.swift in Sources */,
 				3353D04E28998BCA00C197DC /* UIViewControllerExtension.swift in Sources */,
 				33F5B5A02896C4D5005B4E04 /* SignInViewController.swift in Sources */,

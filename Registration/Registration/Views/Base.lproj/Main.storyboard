@@ -37,10 +37,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="emailTF:" destination="BYZ-38-t0r" eventType="editingChanged" id="R1V-9I-Gv5"/>
+                                        </connections>
                                     </textField>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong e-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiH-24-7PX">
                                         <rect key="frame" x="0.0" y="38" width="364" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -51,16 +54,19 @@
                                     </textField>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-8i-doz">
                                         <rect key="frame" x="0.0" y="76" width="364" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3S-qf-PQe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3S-qf-PQe">
                                 <rect key="frame" x="100" y="482" width="214" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4wQ-xJ-C6u"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -86,11 +92,23 @@
                         <outlet property="errorEmailTF" destination="tiH-24-7PX" id="SWL-v9-EJ1"/>
                         <outlet property="errorPasswordTF" destination="Vcd-8i-doz" id="ky3-rl-ciH"/>
                         <outlet property="passwordTextFiel" destination="t39-GG-5g4" id="2jy-es-XQ6"/>
+                        <outlet property="signInButton" destination="t3S-qf-PQe" id="vy6-9G-WRL"/>
+                        <segue destination="2en-gB-F72" kind="show" identifier="goToProfile" id="10i-CO-WlT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="84"/>
+        </scene>
+        <!--ProfileStoryboard-->
+        <scene sceneID="9EU-5A-Fjv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileStoryboard" id="2en-gB-F72" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Urr-Hu-lKl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VhM-cP-5HU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224" y="-128"/>
         </scene>
         <!--SignUpStoryboard-->
         <scene sceneID="XAQ-b4-q86">

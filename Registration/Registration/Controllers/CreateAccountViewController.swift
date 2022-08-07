@@ -27,8 +27,12 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet private weak var signUpButton: UIButton!
     ///FX-Label
     @IBOutlet weak var fxLabel: UIVisualEffectView!
-    /// Complete message
+    ///Complete message
     @IBOutlet weak var congratMessage: UILabel!
+    ///Scroll View
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
     // MARK: - viewDidLoad
     
     override func viewDidLoad() {
@@ -36,6 +40,7 @@ class CreateAccountViewController: UIViewController {
         fxLabel.isHidden = true
         congratMessage.isEnabled = false
         hideKeyboardWhenTappedAround()
+        startKeyboardObservers()
     }
     
     // MARK: - Properties
@@ -84,8 +89,13 @@ class CreateAccountViewController: UIViewController {
     }
     
     @IBAction func signUpButton(_ sender: UIButton) {
-       
-        
+        if let email = emailTF.text,
+           let name = nameTF.text,
+           let password = passwordTF.text {
+            let userModel = UserModel(name: name, email: email, password: password)
+            performSegue(withIdentifier: "goToCode", sender: userModel)
+        }
+           
     }
     
     // MARK: - SetupPasswordIndicator
@@ -105,15 +115,39 @@ class CreateAccountViewController: UIViewController {
         congratMessage.isEnabled = signUpButton.isEnabled
     }
 
+    // MARK: - Keyboard Observers
+    
+    private func startKeyboardObservers() {
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        }
 
-    /*
+        @objc private func keyboardWillShow(notification: Notification) {
+            guard let keyboardSize =
+                (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+            else {
+                return
+            }
+            let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
+            scrollView.contentInset = contentInsets
+            scrollView.scrollIndicatorInsets = contentInsets
+        }
+
+        @objc private func keyboardWillHide() {
+            let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+            scrollView.contentInset = contentInsets
+            scrollView.scrollIndicatorInsets = contentInsets
+        }
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let verificationVC = segue.destination as? VerificationViewController,
+           let userModel = sender as? UserModel {
+            verificationVC.userModel = userModel
+        }
     }
-    */
+
 }
 
