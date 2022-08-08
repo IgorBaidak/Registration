@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="11L-Ec-4Mh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="oi2-NI-eEf">
+            <objects>
+                <viewController id="eBS-aG-Liu" customClass="ProfileViewController" customModule="Registration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yg1-bj-Fhi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR5-H4-hLo">
+                                <rect key="frame" x="313.5" y="94" width="75.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="eBS-aG-Liu" eventType="touchUpInside" id="iEx-sC-Zhc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8d-fy-xWH">
+                                <rect key="frame" x="174" y="682" width="66" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="eBS-aG-Liu" eventType="touchUpInside" id="wHe-5T-JGp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyN-pt-ceT">
+                                <rect key="frame" x="25" y="220" width="364" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BeI-8A-7rg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BeI-8A-7rg" firstAttribute="bottom" secondItem="v8d-fy-xWH" secondAttribute="bottom" constant="100" id="2lo-7l-Rta"/>
+                            <constraint firstItem="BeI-8A-7rg" firstAttribute="trailing" secondItem="zyN-pt-ceT" secondAttribute="trailing" constant="25" id="F4F-MD-ayd"/>
+                            <constraint firstItem="NR5-H4-hLo" firstAttribute="top" secondItem="BeI-8A-7rg" secondAttribute="top" constant="50" id="Ybd-Jx-cHu"/>
+                            <constraint firstItem="zyN-pt-ceT" firstAttribute="leading" secondItem="BeI-8A-7rg" secondAttribute="leading" constant="25" id="aF7-Ry-iXc"/>
+                            <constraint firstItem="v8d-fy-xWH" firstAttribute="centerX" secondItem="BeI-8A-7rg" secondAttribute="centerX" id="irq-7n-fz0"/>
+                            <constraint firstItem="BeI-8A-7rg" firstAttribute="trailing" secondItem="NR5-H4-hLo" secondAttribute="trailing" constant="25" id="nb9-jB-ymp"/>
+                            <constraint firstItem="zyN-pt-ceT" firstAttribute="top" secondItem="NR5-H4-hLo" secondAttribute="bottom" constant="95" id="wi9-PP-Qr5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="OcC-bR-a4k"/>
+                    <connections>
+                        <outlet property="infoUser" destination="zyN-pt-ceT" id="k9Z-Wj-8sx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8x-vS-5yk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="97"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="sR6-Lf-NG5">
+            <objects>
+                <viewController id="blW-iL-6hZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IpK-UR-oAT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iqE-Ma-ids"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Cuq-LP-cdg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BsD-pW-uls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="-511"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8GA-nG-aWT">
+            <objects>
+                <tabBarController id="11L-Ec-4Mh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5KO-75-4AX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="blW-iL-6hZ" kind="relationship" relationship="viewControllers" id="zpK-XG-hp8"/>
+                        <segue destination="eBS-aG-Liu" kind="relationship" relationship="viewControllers" id="QXI-VE-DYe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3f-Nv-A2T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-509" y="-207"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
