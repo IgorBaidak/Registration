@@ -32,17 +32,30 @@
                                     <action selector="deleteButton:" destination="eBS-aG-Liu" eventType="touchUpInside" id="wHe-5T-JGp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyN-pt-ceT">
+                                <rect key="frame" x="25" y="220" width="364" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BeI-8A-7rg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BeI-8A-7rg" firstAttribute="bottom" secondItem="v8d-fy-xWH" secondAttribute="bottom" constant="100" id="2lo-7l-Rta"/>
+                            <constraint firstItem="BeI-8A-7rg" firstAttribute="trailing" secondItem="zyN-pt-ceT" secondAttribute="trailing" constant="25" id="F4F-MD-ayd"/>
                             <constraint firstItem="NR5-H4-hLo" firstAttribute="top" secondItem="BeI-8A-7rg" secondAttribute="top" constant="50" id="Ybd-Jx-cHu"/>
+                            <constraint firstItem="zyN-pt-ceT" firstAttribute="leading" secondItem="BeI-8A-7rg" secondAttribute="leading" constant="25" id="aF7-Ry-iXc"/>
                             <constraint firstItem="v8d-fy-xWH" firstAttribute="centerX" secondItem="BeI-8A-7rg" secondAttribute="centerX" id="irq-7n-fz0"/>
                             <constraint firstItem="BeI-8A-7rg" firstAttribute="trailing" secondItem="NR5-H4-hLo" secondAttribute="trailing" constant="25" id="nb9-jB-ymp"/>
+                            <constraint firstItem="zyN-pt-ceT" firstAttribute="top" secondItem="NR5-H4-hLo" secondAttribute="bottom" constant="95" id="wi9-PP-Qr5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="OcC-bR-a4k"/>
+                    <connections>
+                        <outlet property="infoUser" destination="zyN-pt-ceT" id="k9Z-Wj-8sx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8x-vS-5yk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,6 +98,9 @@
     </scenes>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

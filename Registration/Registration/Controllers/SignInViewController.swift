@@ -45,6 +45,7 @@ class SignInViewController: UIViewController {
            email == userModel.email,
            password == userModel.password
         { performSegue(withIdentifier: "goToProfile", sender: nil) }
+        
     }
     
     private func isLogUser() {
