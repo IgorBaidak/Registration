@@ -65,8 +65,8 @@ class CreateAccountViewController: UIViewController {
     
     @IBAction func passwordAction(_ sender: UITextField) {
         if let password = sender.text,
-           !password.isEmpty {
-           strongPassword = VerificationService.isValidPassword(pass: password)
+               !password.isEmpty {
+               strongPassword = VerificationService.isValidPassword(pass: password)
         }
         errorPaswordLbl.isHidden = strongPassword != .veryWeak
         strongPassIndicator()
@@ -78,7 +78,7 @@ class CreateAccountViewController: UIViewController {
            !confirm.isEmpty,
            let confirmPass = passwordTF.text,
            !confirmPass.isEmpty {
-            validConfirmPassword = VerificationService.isPassConfirm(pass1: confirmPass, pass2: confirm)
+           validConfirmPassword = VerificationService.isPassConfirm(pass1: confirmPass, pass2: confirm)
         }
         errorConformPasswordLbl.isHidden = validConfirmPassword
     }
@@ -92,8 +92,8 @@ class CreateAccountViewController: UIViewController {
         if let email = emailTF.text,
            let name = nameTF.text,
            let password = passwordTF.text {
-            let userModel = UserModel(name: name, email: email, password: password)
-            performSegue(withIdentifier: "goToCode", sender: userModel)
+           let userModel = UserModel(name: name, email: email, password: password)
+           performSegue(withIdentifier: "goToCode", sender: userModel)
         }
            
     }
