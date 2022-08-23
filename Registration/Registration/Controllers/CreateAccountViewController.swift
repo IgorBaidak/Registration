@@ -26,9 +26,9 @@ class CreateAccountViewController: UIViewController {
     ///signUp Button
     @IBOutlet private weak var signUpButton: UIButton!
     ///FX-Label
-    @IBOutlet weak var fxLabel: UIVisualEffectView!
+    @IBOutlet weak var fxLabel: UIVisualEffectView! { didSet { fxLabel.isHidden = true }}
     ///Complete message
-    @IBOutlet weak var congratMessage: UILabel!
+    @IBOutlet weak var congratMessage: UILabel! { didSet { congratMessage.isEnabled = false }}
     ///Scroll View
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -37,8 +37,6 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fxLabel.isHidden = true
-        congratMessage.isEnabled = false
         hideKeyboardWhenTappedAround()
         startKeyboardObservers()
     }

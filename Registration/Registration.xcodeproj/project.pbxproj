@@ -12,6 +12,7 @@
 		3332B5F928A0322B008CD840 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332B5F828A0322B008CD840 /* UserDefaultsService.swift */; };
 		3332B5FB28A03294008CD840 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332B5FA28A03294008CD840 /* UserDefaults.swift */; };
 		3332B5FD28A04CB2008CD840 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332B5FC28A04CB2008CD840 /* ProfileViewController.swift */; };
+		3332B5FF28A16D08008CD840 /* EditUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332B5FE28A16D08008CD840 /* EditUserDataViewController.swift */; };
 		3347B22D289C67CE009D9FE7 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3347B22C289C67CE009D9FE7 /* ProfileStoryboard.storyboard */; };
 		3353D04828983A1200C197DC /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3353D04728983A1200C197DC /* SignUpStoryboard.storyboard */; };
 		3353D04A2899794800C197DC /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353D0492899794800C197DC /* Verification.swift */; };
@@ -32,6 +33,7 @@
 		3332B5F828A0322B008CD840 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		3332B5FA28A03294008CD840 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		3332B5FC28A04CB2008CD840 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3332B5FE28A16D08008CD840 /* EditUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDataViewController.swift; sourceTree = "<group>"; };
 		3347B22C289C67CE009D9FE7 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		3353D04728983A1200C197DC /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		3353D0492899794800C197DC /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				33F5B5A12896C4F1005B4E04 /* CreateAccountViewController.swift */,
 				3332B5F628A02D2A008CD840 /* HelloViewController.swift */,
 				3332B5FC28A04CB2008CD840 /* ProfileViewController.swift */,
+				3332B5FE28A16D08008CD840 /* EditUserDataViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				3332B5F728A02D2A008CD840 /* HelloViewController.swift in Sources */,
 				3353D04A2899794800C197DC /* Verification.swift in Sources */,
 				33F5B5A22896C4F1005B4E04 /* CreateAccountViewController.swift in Sources */,
+				3332B5FF28A16D08008CD840 /* EditUserDataViewController.swift in Sources */,
 				3332B5FB28A03294008CD840 /* UserDefaults.swift in Sources */,
 				3332B5F528A00734008CD840 /* UserModel.swift in Sources */,
 				339F8F8B289689C50025BF91 /* AppDelegate.swift in Sources */,

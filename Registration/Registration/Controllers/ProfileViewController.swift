@@ -25,6 +25,10 @@ class ProfileViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
+    @IBAction func editButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToEdit", sender: userModel)
+    }
+    
     private func setupUI() {
         guard let email = UserDefaults.standard.string(forKey: "email"),
               let name = UserDefaults.standard.string(forKey: "name") else { return }

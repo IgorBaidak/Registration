@@ -49,7 +49,7 @@ class SignInViewController: UIViewController {
     }
     
     private func isLogUser() {
-        if let userModel = UserDefaultsService.getUserModel()
+        if let _ = UserDefaultsService.getUserModel()
         { performSegue(withIdentifier: "goToProfile", sender: nil) }
     }
     
